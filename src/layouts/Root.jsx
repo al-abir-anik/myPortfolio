@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 const Root = () => {
   return (
@@ -15,6 +16,7 @@ const Root = () => {
         <Hero></Hero>
         <About></About>
         <Skills></Skills>
+        <Experience></Experience>
       </div>
 
       <div className="flex flex-col flex-grow">
