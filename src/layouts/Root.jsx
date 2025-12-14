@@ -18,7 +18,7 @@ const Root = () => {
         <Hero></Hero>
         <About></About>
         <Skills></Skills>
-        <Experience></Experience>
+        {/* <Experience></Experience> */}
         <Projects></Projects>
         <Contact></Contact>
       </div>

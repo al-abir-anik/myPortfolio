@@ -11,7 +11,7 @@ const Hero = () => {
               Al Abir Anik
             </h1>
             <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
-              Frontend Web Developer
+              Juniour Web Developer
             </span>
             <p className="my-2 max-w-xl py-6 font-light tracking-tight text-center lg:text-start">
               {HERO_CONTENT}
