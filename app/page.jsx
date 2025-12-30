@@ -1,25 +1,29 @@
-import ClientCarousel from "@/components/carousel/ClientCarousel";
-import FAQ from "@/components/FAQ";
-import GetInTouch from "@/components/GetInTouch";
-import About from "@/components/home-sections/About";
-import Hero from "@/components/home-sections/Hero";
-import Process from "@/components/home-sections/Process";
-import Service from "@/components/home-sections/Service";
-import Projects from "@/components/home-sections/Projects";
-import Testimonial from "@/components/Testimonial";
+import Header from "@/components/Header";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <div className="w-full">
-      <Hero />
-      <About />
-      <ClientCarousel />
-      <Projects />
-      <Testimonial />
-      <Process />
-      <Service />
-      <FAQ />
-      <GetInTouch />
+    <div className="w-full max-w-300 mx-auto flex justify-between">
+      <Header />
+
+      <main className="w-full max-w-156 py-24 space-y-36 scroll-smooth">
+        <section id="about" className="scroll-mt-24">
+          <About />
+        </section>
+
+        <section id="projects" className="scroll-mt-24">
+          <Projects />
+        </section>
+
+        <section id="skills" className="scroll-mt-24">
+          <Skills />
+        </section>
+
+        <Footer />
+      </main>
     </div>
   );
 };

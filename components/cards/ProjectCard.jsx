@@ -1,97 +1,54 @@
-"use client";
-import { motion } from "framer-motion";
-import { upArrowGradientIcon } from "@/data/icons";
 import Link from "next/link";
+import Image from "next/image";
+import { upArrowGradientIcon } from "@/data/icons";
 
-const ProjectCard = ({ work }) => {
-  const easing = [0.66, 0, 0.01, 1];
-
-  const bgVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.2 },
-  };
-  const titleVariants = {
-    initial: { x: -200 },
-    hover: { x: 0 },
-  };
-  const btnVariants = {
-    initial: { x: 70, rotate: 55 },
-    hover: { x: 0, rotate: 0 },
-  };
-  const descVariants = {
-    initial: { y: 120 },
-    hover: { y: 0 },
-  };
-
+const ProjectCard = ({ project }) => {
   return (
-    <motion.div
-      className="group relative w-full aspect-square rounded-[20px] overflow-hidden"
-      initial="initial"
-      whileHover="hover"
+    <Link
+      href={"/nice"}
+      className="w-full p-5 flex gap-5 bg-white/40 border-2 border-white rounded-xl hover:scale-105 hover:bg-white transition-all ease-in-out"
     >
-      {/* Background image */}
-      <motion.div
-        className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${work.image})` }}
-        variants={bgVariants}
-        transition={{ duration: 0.6, ease: easing }}
-      />
+      <figure className="w-48 h-28 relative rounded-md border border-zinc-300 overflow-hidden">
+        <Image
+          src="/images/aboutImg.png"
+          alt="profile-pic"
+          fill
+          sizes="56px"
+          className="object-cover"
+        />
+      </figure>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-zinc800/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      {/* Desktop screen */}
-      <div className="w-full h-fit p-[18px] hidden xl:flex justify-between absolute bottom-0 left-0 z-10">
-        {/* Title */}
-        <motion.div
-          variants={titleVariants}
-          transition={{ duration: 0.6, ease: easing }}
-          className="w-fit h-12 py-2 px-[26px] flex items-center gap-[18px] text-sm font-medium text-zinc-800 bg-white rounded-full"
-        >
-          <p>{work.title}</p>
-          <p>/</p>
-          <p>{work.year}</p>
-        </motion.div>
-
-        {/* Button */}
-        <Link href={`my-works/${work.url}`}>
-          <motion.div
-            variants={btnVariants}
-            transition={{ duration: 0.6, ease: easing }}
-            className="w-12 h-12 grid place-items-center bg-white/90 outline-1 outline-white rounded-full backdrop-blur-md"
-          >
-            {upArrowGradientIcon}
-          </motion.div>
-        </Link>
-      </div>
-
-      {/* Mobile screen */}
-      <div className="xl:hidden w-full h-fit p-[18px] flex justify-between absolute bottom-0 left-0 z-10">
-        {/* Title */}
-        <div className="w-fit h-12 py-2 px-[26px] flex items-center gap-[18px] text-sm font-medium text-zinc-800 bg-white rounded-full">
-          <p>{work.title}</p>
-          <p>/</p>
-          <p>{work.year}</p>
+      <div className="w-full space-y-2">
+        <div className="flex gap-3">
+          <p className="text-lg font-medium">{project.title}</p>
+          {/* <Link href={`projects/${project.url}`}>
+            <div className="w-4 h-4 grid place-items-center bg-white/90 outline-1 outline-white rounded-full backdrop-blur-md">
+              {upArrowGradientIcon}
+            </div>
+          </Link> */}
         </div>
 
-        {/* Button */}
-        <Link
-          href={`my-works/${work.url}`}
-          className="w-12 h-12 grid place-items-center bg-white/90 outline-1 outline-white rounded-full backdrop-blur-md"
-        >
-          {upArrowGradientIcon}
-        </Link>
-      </div>
+        <p className="pb-1 text-[15px]">{project.description}</p>
 
-      {/* Description */}
-      {/* <motion.p
-        variants={descVariants}
-        transition={{ duration: 0.6, ease: easing }}
-        className="w-2xs m-11 text-sm font-medium text-white relative z-10"
-      >
-        {work.description}
-      </motion.p> */}
-    </motion.div>
+        <div className="flex gap-3">
+          {project.technologies.map((t, index) => (
+            <span
+              key={index}
+              className="w-fit px-2 py-1.5 flex gap-1.5 items-center bg-zinc50 outline-1 outline-zinc200 rounded-lg"
+            >
+              <Image
+                src={t.icon}
+                alt={t.tech}
+                width={15}
+                height={15}
+                className=" object-cover rounded-full select-none"
+              />
+              <p className="text-xs">{t.tech}</p>
+            </span>
+          ))}
+        </div>
+      </div>
+    </Link>
   );
 };
 
