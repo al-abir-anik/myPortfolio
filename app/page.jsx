@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <div className="w-full max-w-300 mx-auto flex justify-between">
+    <div className="w-full max-w-300 mx-auto flex flex-col lg:flex-row justify-between">
       <Header />
 
-      <main className="w-full max-w-156 py-24 space-y-36 scroll-smooth">
-        <section id="about" className="scroll-mt-24">
+      <main className="w-full max-w-156 lg:py-24 space-y-36 scroll-smooth">
+        <section id="about" className="scroll-mt-24 text-center lg:text-left">
           <About />
         </section>
 

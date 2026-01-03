@@ -1,54 +1,56 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
-import { upArrowGradientIcon } from "@/data/icons";
+import { CodeAndLink } from "../CodeAndLink";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Link
-      href={"/nice"}
-      className="w-full p-5 flex gap-5 bg-white/40 border-2 border-white rounded-xl hover:scale-105 hover:bg-white transition-all ease-in-out"
+    <a
+      href={project.liveLink}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="group w-full p-5 flex gap-5 bg-white/40 border-2 border-white rounded-2xl  hover:bg-white transition-colors ease-in-out duration-300 hover:shadow cursor-pointer"
     >
-      <figure className="w-48 h-28 relative rounded-md border border-zinc-300 overflow-hidden">
+      <div className="w-50 h-28 flex flex-col">
         <Image
-          src="/images/aboutImg.png"
-          alt="profile-pic"
-          fill
-          sizes="56px"
-          className="object-cover"
+          src={project.banner}
+          alt={project.title}
+          width={150}
+          height={112}
+          className="w-full h-full object-cover  rounded-xl border border-zinc300  group-hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
         />
-      </figure>
+        {/* <CodeAndLink containerClass="flex" /> */}
+      </div>
 
-      <div className="w-full space-y-2">
-        <div className="flex gap-3">
-          <p className="text-lg font-medium">{project.title}</p>
-          {/* <Link href={`projects/${project.url}`}>
-            <div className="w-4 h-4 grid place-items-center bg-white/90 outline-1 outline-white rounded-full backdrop-blur-md">
-              {upArrowGradientIcon}
-            </div>
-          </Link> */}
-        </div>
-
-        <p className="pb-1 text-[15px]">{project.description}</p>
-
-        <div className="flex gap-3">
+      <div className="w-full">
+        <p className="text-lg font-medium group-hover:text-blue">
+          {project.title}
+        </p>
+        <p className="mt-1.5 text-[15px] text-zinc600">{project.description}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
           {project.technologies.map((t, index) => (
             <span
               key={index}
-              className="w-fit px-2 py-1.5 flex gap-1.5 items-center bg-zinc50 outline-1 outline-zinc200 rounded-lg"
+              className="w-fit px-2 py-1.5 flex gap-1.5 items-center bg-zinc50 outline outline-zinc200 border border-white rounded-lg cursor-text"
             >
-              <Image
-                src={t.icon}
-                alt={t.tech}
-                width={15}
-                height={15}
-                className=" object-cover rounded-full select-none"
-              />
-              <p className="text-xs">{t.tech}</p>
+              {t.logo && (
+                <Image
+                  src={t.logo}
+                  alt={t.tech}
+                  width={15}
+                  height={15}
+                  className="object-cover rounded select-none"
+                />
+              )}
+              <p className="text-xs tracking-wider bg-secondary-gradient bg-clip-text">
+                {t.tech}
+              </p>
             </span>
           ))}
         </div>
+
+        <CodeAndLink sourceCode={project.sourceCode} containerClass="flex" />
       </div>
-    </Link>
+    </a>
   );
 };
 

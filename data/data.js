@@ -1,10 +1,44 @@
-export const HERO_CONTENT = `I am a passionate and self-taught Frontend Web Developer with a solid foundation in React JS, JavaScript(ES6+) and Tailwind CSS. I’ve completed my core learning journey and  Now I’m looking forward to join a professional team where I can apply my skills, contribute to bigger projects and learn from real-world challenges.`;
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaDiscord,
+  FaChessPawn,
+} from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { TbBrandDribbbleFilled } from "react-icons/tb";
 
-export const ABOUT_TEXT = `I’m a Computer Science undergraduate and a passionate Web Developer with a strong interest in building clean, responsive, and user-friendly web applications.
-
-My interest in computer gaming sparked a curiosity for creative and productive uses of technology, leading me to UI and web design. Over time, this evolved into a passion for web development, where I enjoy bringing designs to life through code.
-
-I genuinely love learning, doing, and improving at every day. My goal is to grow further in this field, contribute to impactful projects, and continuously challenge myself to become better than yesterday.`;
+export const socialLinks = [
+  {
+    platform: "Github",
+    logo: <FaGithub />,
+    link: "https://github.com/al-abir-anik",
+  },
+  {
+    platform: "LinkedIn",
+    logo: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/al-abir-anik/",
+  },
+  // {
+  //   platform: "Discord",
+  //   logo: <FaDiscord />,
+  //   link: "",
+  // },
+  {
+    platform: "Whatsapp",
+    logo: <IoLogoWhatsapp />,
+    link: "https://wa.me/8801403924435",
+  },
+  {
+    platform: "Dribbble",
+    logo: <TbBrandDribbbleFilled />,
+    link: "https://dribbble.com/alabiranik",
+  },
+  // {
+  //   platform: "Chess.com",
+  //   logo: <FaChessPawn />,
+  //   link: "https://www.chess.com/member/anik563",
+  // },
+];
 
 export const experience = [
   {
@@ -48,47 +82,49 @@ export const projects = [
   {
     url: "playgrid",
     title: "PlayGrid | A Gaming Portal",
-    image: "https://i.ibb.co.com/mC0sHqGz/Screenshot-96.png",
+    banner: "/images/projects/playgrid.png",
     description:
-      "A full-featured digital game store inspired by Epic Games Store, where users can browse and purchase games — showcasing my ability to build scalable, modern, and user-friendly web applications with React JS.",
+      "Playgrid is a full-featured game store where users can browse, wishlist, and purchase games through a smooth and responsive interface. It showcases my ability to build scalable and modern e-commerce including authentication, secure payments and state management using React js.",
     technologies: [
-      { tech: "Dribbble", icon: "/images/dribbble.png" },
-      { tech: "Behance", icon: "/images/behance.png" },
-      { tech: "Figma", icon: "/images/figma.png" },
-      { tech: "X", icon: "/images/twitter.png" },
+      { tech: "React", logo: "/images/logo/React.svg" },
+      { tech: "Node.js", logo: "/images/logo/Node.js.svg" },
+      { tech: "Express", logo: "/images/logo/Express.svg" },
+      { tech: "MongoDB", logo: "/images/logo/MongoDB.svg" },
+      { tech: "Tailwind CSS", logo: "/images/logo/Tailwind CSS.svg" },
+      { tech: "Firebase", logo: "/images/logo/Firebase.svg" },
+      { tech: "Stripe Payment", logo: "" },
     ],
     liveLink: "https://playgrid-aaa.surge.sh/",
-    sourceCode: "https://github.com/al-abir-anik/PlayGrid-Client",
+    sourceCode: "https://github.com/al-abir-anik/playgrid-client",
   },
   {
-    url: "mistfabric",
-    title: "Mist Fabric | E-Commerce Store",
-    image: "https://i.ibb.co.com/rKhgfG6h/fresh-Basket-home.png",
+    url: "portify",
+    title: "Portify | Portfolio website",
+    banner: "/images/projects/portify.png",
     description:
-      "I built it to explore Next.js from scratch, understand its features, and gain hands-on experience.Through this project, I learned how to structure a Next.js app, handle dynamic data, and build a responsive, interactive user interface.",
+      "Portify is a modern agency-style portfolio built to showcase my frontend skills, animations and responsive layouts. It highlights clean UI composition, smooth interactions and performance-focused components.",
     technologies: [
-      { tech: "Dribbble", icon: "/images/dribbble.png" },
-      { tech: "Behance", icon: "/images/behance.png" },
-      { tech: "Figma", icon: "/images/figma.png" },
-      { tech: "X", icon: "/images/twitter.png" },
+      { tech: "Next.js", logo: "/images/logo/Next.js.svg" },
+      { tech: "React", logo: "/images/logo/React.svg" },
+      { tech: "Tailwind CSS", logo: "/images/logo/Tailwind CSS.svg" },
+      { tech: "Motion.dev", logo: "" },
     ],
-    liveLink: "https://freshbasket-aaa.surge.sh/",
-    sourceCode: "https://github.com/al-abir-anik/FreshBasket-Client",
+    liveLink: "https://portfolio-template-zeta-murex.vercel.app/",
+    // sourceCode: "https://github.com/al-abir-anik/portify",
   },
   {
-    url: "freshbasket",
-    title: "Fresh Basket | Grocery E-Commerce Website",
-    image: "https://i.ibb.co.com/rKhgfG6h/fresh-Basket-home.png",
+    url: "gizmo",
+    title: "Gizmo | Gadget E-Commerce store",
+    banner: "/images/projects/gizmo.png",
     description:
-      "A modern, responsive online grocery shopping platform where users can browse fresh groceries, add them to their cart, and complete purchases with a smooth checkout flow.",
+      "Gizmo is a e-commerce platform featuring NextAuth authentication, custom API routes, an admin dashboard for managing products and orders. It emphasizes secure user flows, server-side logic and a fully responsive interface.",
     technologies: [
-      { tech: "Dribbble", icon: "/images/dribbble.png" },
-      { tech: "Behance", icon: "/images/behance.png" },
-      { tech: "Figma", icon: "/images/figma.png" },
-      { tech: "X", icon: "/images/twitter.png" },
+      { tech: "Next.js", logo: "/images/logo/Next.js.svg" },
+      { tech: "React", logo: "/images/logo/React.svg" },
+      { tech: "Tailwind CSS", logo: "/images/logo/Tailwind CSS.svg" },
     ],
-    liveLink: "https://freshbasket-aaa.surge.sh/",
-    sourceCode: "https://github.com/al-abir-anik/FreshBasket-Client",
+    liveLink: "https://gizmo-server.vercel.app/",
+    sourceCode: "https://github.com/al-abir-anik/gizmo",
   },
 ];
 
@@ -109,11 +145,11 @@ export const skills = {
       logo: "/images/logo/JavaScript.svg",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
-    {
-      tech: "TypeScript",
-      logo: "/images/logo/TypeScript.svg",
-      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    },
+    // {
+    //   tech: "TypeScript",
+    //   logo: "/images/logo/TypeScript.svg",
+    //   link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    // },
     {
       tech: "Redux",
       logo: "/images/logo/Redux.svg",
@@ -147,6 +183,9 @@ export const skills = {
       logo: "/images/logo/Express.svg",
       link: "https://expressjs.com",
     },
+  ],
+
+  database: [
     {
       tech: "MongoDB",
       logo: "/images/logo/MongoDB.svg",

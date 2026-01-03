@@ -1,7 +1,8 @@
 import "../style/index.css";
 import localFont from "next/font/local";
 import SmoothScroll from "@/components/SmoothScroll";
-import PageTransition from "@/components/PageTransition";
+import ScrollToTop from "@/components/ScrollToTop";
+// import PageTransition from "@/components/PageTransition";
 
 const clashGrotesk = localFont({
   src: [
@@ -48,14 +49,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <SmoothScroll>
+        <ScrollToTop />
         <body
           className={`${clashGrotesk.className} antialiased bg-zinc100 text-zinc800`}
-        > {/* leading-[130%] */}
-          {/* <Navbar /> */}
+        >
+          {/* leading-[130%] */}
           {/* <PageTransition> */}
           <div className="w-full px-3.75 sm:px-7.5">{children}</div>
           {/* </PageTransition> */}
-          {/* <Footer /> */}
         </body>
       </SmoothScroll>
     </html>

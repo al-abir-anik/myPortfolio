@@ -17,7 +17,7 @@ const Skills = () => {
                 href={s.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-auto h-32 border-t-2 border-white rounded-lg flex flex-col justify-center items-center gap-3.5 bg-white/40 hover:bg-white ease-in-out transition-colors duration-200"
+                className="w-auto h-32 border-t-2 border-white rounded-2xl flex flex-col justify-center items-center gap-3.5 bg-white/40 hover:bg-white ease-in-out transition-colors duration-200"
               >
                 <figure className="w-14 h-14 bg-white shadow rounded-2xl flex justify-center items-center">
                   <Image

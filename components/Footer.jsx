@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <div class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+    <div className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
       <p>
         {" "}
         <a
           href="https://www.figma.com/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Figma (opens in a new tab)"
@@ -14,7 +14,7 @@ const Footer = () => {
         </a>{" "}
         <a
           href="https://code.visualstudio.com/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Visual Studio Code (opens in a new tab)"
@@ -23,7 +23,7 @@ const Footer = () => {
         </a>{" "}
         <a
           href="https://nextjs.org/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Next.js (opens in a new tab)"
@@ -32,7 +32,7 @@ const Footer = () => {
         </a>{" "}
         <a
           href="https://tailwindcss.com/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Tailwind CSS (opens in a new tab)"
@@ -42,7 +42,7 @@ const Footer = () => {
         , deployed with{" "}
         <a
           href="https://vercel.com/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Vercel (opens in a new tab)"
@@ -52,7 +52,7 @@ const Footer = () => {
         . All text is set in the{" "}
         <a
           href="https://rsms.me/inter/"
-          class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Inter (opens in a new tab)"
