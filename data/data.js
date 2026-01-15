@@ -12,11 +12,13 @@ export const socialLinks = [
     platform: "Github",
     logo: <FaGithub />,
     link: "https://github.com/al-abir-anik",
+    hoverColor: "hover:text-[#24292e]",
   },
   {
     platform: "LinkedIn",
     logo: <FaLinkedinIn />,
     link: "https://www.linkedin.com/in/al-abir-anik/",
+    hoverColor: "hover:text-[#0a66c2]",
   },
   // {
   //   platform: "Discord",
@@ -27,11 +29,13 @@ export const socialLinks = [
     platform: "Whatsapp",
     logo: <IoLogoWhatsapp />,
     link: "https://wa.me/8801403924435",
+    hoverColor: "hover:text-[#128c7e]",
   },
   {
     platform: "Dribbble",
     logo: <TbBrandDribbbleFilled />,
     link: "https://dribbble.com/alabiranik",
+    hoverColor: "hover:text-[#ea4c89]",
   },
   // {
   //   platform: "Chess.com",
@@ -109,8 +113,8 @@ export const projects = [
       { tech: "Tailwind CSS", logo: "/images/logo/Tailwind CSS.svg" },
       { tech: "Motion.dev", logo: "" },
     ],
-    liveLink: "https://portfolio-template-zeta-murex.vercel.app/",
-    // sourceCode: "https://github.com/al-abir-anik/portify",
+    liveLink: "https://portify-aaa.vercel.app/",
+    sourceCode: "https://github.com/al-abir-anik/portify",
   },
   {
     url: "gizmo",
@@ -145,11 +149,11 @@ export const skills = {
       logo: "/images/logo/JavaScript.svg",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
-    // {
-    //   tech: "TypeScript",
-    //   logo: "/images/logo/TypeScript.svg",
-    //   link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    // },
+    {
+      tech: "TypeScript",
+      logo: "/images/logo/TypeScript.svg",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
     {
       tech: "Redux",
       logo: "/images/logo/Redux.svg",
@@ -158,6 +162,11 @@ export const skills = {
     {
       tech: "Tailwind CSS",
       logo: "/images/logo/Tailwind CSS.svg",
+      link: "https://tailwindcss.com",
+    },
+    {
+      tech: "Shadcn Ui",
+      logo: "/images/logo/shadcn.png",
       link: "https://tailwindcss.com",
     },
     {
@@ -183,15 +192,20 @@ export const skills = {
       logo: "/images/logo/Express.svg",
       link: "https://expressjs.com",
     },
-  ],
-
-  database: [
     {
       tech: "MongoDB",
       logo: "/images/logo/MongoDB.svg",
       link: "https://www.mongodb.com",
     },
   ],
+
+  // database: [
+  //   {
+  //     tech: "MongoDB",
+  //     logo: "/images/logo/MongoDB.svg",
+  //     link: "https://www.mongodb.com",
+  //   },
+  // ],
 
   tools: [
     {
@@ -205,9 +219,9 @@ export const skills = {
       link: "https://firebase.google.com",
     },
     {
-      tech: "VS Code",
-      logo: "/images/logo/VS Code.svg",
-      link: "https://code.visualstudio.com",
+      tech: "Vite",
+      logo: "/images/logo/Vite.js.svg",
+      link: "https://vite.dev/",
     },
     {
       tech: "Figma",

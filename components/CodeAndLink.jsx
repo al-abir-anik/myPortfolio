@@ -7,18 +7,19 @@ const defaultTransition = {
   damping: 25,
 };
 
-export const CodeAndLink = ({ containerClass, sourceCode }) => {
+export const CodeAndLink = ({ liveLink, sourceCode }) => {
   const codeControls = useAnimation();
   const linkControls = useAnimation();
 
   return (
-    <div
-      className={`${containerClass} w-fit mt-3.5 flex-col items-start gap-2 `}
-    >
+    <div className={`w-fit mt-3.5 flex items-start gap-2 `}>
       {/* Code Icon */}
       {sourceCode && (
-        <button
-          onClick={() => window.open(sourceCode, "_blank")}
+        <a
+          // onClick={() => window.open(sourceCode, "_blank")}
+          href={sourceCode}
+          target="_blank"
+          rel="noreferrer noopener"
           onMouseEnter={() => codeControls.start("animate")}
           onMouseLeave={() => codeControls.start("normal")}
           className="btn-motion px-3 py-2.25 flex items-center gap-1.5 bg-secondary-gradient text-white rounded-xl select-none cursor-pointer"
@@ -58,16 +59,20 @@ export const CodeAndLink = ({ containerClass, sourceCode }) => {
           </svg>
 
           <span className="text-xs ">Source code</span>
-        </button>
+        </a>
       )}
 
       {/* Link Icon */}
-      {/* <div
+      <a
+        // onClick={() => window.open(liveLink, "_blank")}
+        href={liveLink}
+        target="_blank"
+        rel="noreferrer noopener"
         onMouseEnter={() => linkControls.start("animate")}
         onMouseLeave={() => linkControls.start("normal")}
-        className="px-3 py-2 flex items-center gap-1.5 bg-secondary-gradient text-white rounded-2xl select-none cursor-pointer"
+        className="btn-motion px-3 py-2.25 flex items-center gap-1.5 bg-secondary-gradient text-white rounded-xl select-none cursor-pointer"
       >
-        <span className="pl-1 text-sm">Live link</span>
+        <span className="pl-1 text-xs">Live Site</span>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +106,7 @@ export const CodeAndLink = ({ containerClass, sourceCode }) => {
           />
           <line x1="8" x2="16" y1="12" y2="12" />
         </svg>
-      </div> */}
+      </a>
     </div>
   );
 };

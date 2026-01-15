@@ -6,11 +6,11 @@ const Skills = () => {
     <div className="w-full flex flex-col gap-10">
       {Object.entries(skills).map(([category, items]) => (
         <div key={category} className="w-full flex flex-col gap-5">
-          <h3 className="font-semibold text-2xl sm:text-xs tracking-wider uppercase">
+          <h3 className="font-semibold text-sm lg:text-xs tracking-wider uppercase">
             {category}
           </h3>
 
-          <div className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+          <div className="w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3">
             {items.map((s) => (
               <a
                 key={s.tech}

@@ -4,12 +4,7 @@ import { CodeAndLink } from "../CodeAndLink";
 
 const ProjectCard = ({ project }) => {
   return (
-    <a
-      href={project.liveLink}
-      target="_blank"
-      rel="noreferrer noopener"
-      className="group w-full p-5 flex gap-5 bg-white/40 border-2 border-white rounded-2xl  hover:bg-white transition-colors ease-in-out duration-300 hover:shadow cursor-pointer"
-    >
+    <div className="group w-full p-4 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 bg-white/40 border-2 border-white rounded-2xl  hover:bg-white transition-colors ease-in-out duration-300 hover:shadow">
       <div className="w-50 h-28 flex flex-col">
         <Image
           src={project.banner}
@@ -48,9 +43,12 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
 
-        <CodeAndLink sourceCode={project.sourceCode} containerClass="flex" />
+        <CodeAndLink
+          liveLink={project.liveLink}
+          sourceCode={project.sourceCode}
+        />
       </div>
-    </a>
+    </div>
   );
 };
 

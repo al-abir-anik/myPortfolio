@@ -10,7 +10,7 @@ const defaultTransition = {
   mass: 1,
 };
 
-const CopyEmail = ({ value }) => {
+const  CopyEmail = ({ value }) => {
   const controls = useAnimation();
   const [copied, setCopied] = useState(false);
 

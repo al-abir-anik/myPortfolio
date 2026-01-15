@@ -21,13 +21,10 @@ button {
 
 @layer components {
   .bg-primary-gradient {
-    @apply bg-[radial-gradient(100%_100%_at_100%_50%,_#F64617_0%,_#FD6E32_100%)];
+    @apply bg-[radial-gradient(100%_100%_at_100%_50%,#F64617_0%,#FD6E32_100%)];
   }
   .bg-secondary-gradient {
     @apply bg-[radial-gradient(66.51%_66.51%_at_66.51%_50%,#1747F6_0%,#7290FF_100%)];
-  }
-  .text-secondary-gradient {
-    @apply text-[radial-gradient(66.51%_66.51%_at_66.51%_50%,#1747F6_0%,#7290FF_100%)];
   }
 
   .shadow-primary {
@@ -49,7 +46,7 @@ button {
 
 @keyframes MoveUpInitial {
   to {
-    transform: translate3d(0, -125%, 0);
+    transform: translate3d(0, -140%, 0);
   }
 }
 @keyframes MoveUpEnd {
@@ -61,14 +58,31 @@ button {
   }
 }
 
+/* view link cursor */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite; /* 8s = slow */
+}
 
 /* webkit */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-lightblue);
-  border-radius: 2px;
+  background: radial-gradient(
+    66.51% 66.51% at 66.51% 50%,
+    #1747f6 0%,
+    #7290ff 100%
+  );
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;

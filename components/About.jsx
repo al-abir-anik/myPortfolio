@@ -3,10 +3,10 @@ import CopyEmail from "./CopyEmail";
 const About = () => {
   const myEmail = "alabiranik56@gmail.com";
   const myResume =
-    "https://drive.google.com/file/d/1LV5e8SfJKJKcwObT6zOKIK7i5UmHbuiH/view";
+    "https://drive.google.com/file/d/1zGBuytkxBG8nW5tPAUmyrCBYdMpwm0fQ/view?usp=sharing";
 
   return (
-    <div className="w-full flex flex-col-reverse lg:flex-col gap-8">
+    <div className="w-full pt-2 lg:pt-0 flex flex-col-reverse lg:flex-col gap-8">
       {/* about */}
       <div>
         <p className="mb-4">
@@ -136,13 +136,13 @@ const About = () => {
       </div>
 
       {/*    buttons    */}
-      <div className="flex flex-col lg:flex-row items-center gap-4">
+      <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4">
         <CopyEmail value={myEmail} />
         <a
           href={myResume}
           target="_blank"
           rel="noreferrer noopener"
-          className="w-fit px-7 py-4 text-xs font-medium text-white flex items-center gap-2 border border-white bg-secondary-gradient rounded-full hover:underline"
+          className="w-fit px-7 py-4.5 text-xs font-medium text-white flex items-center gap-2 border-2 border-lightblue bg-secondary-gradient rounded-full hover:underline"
         >
           Resume
         </a>

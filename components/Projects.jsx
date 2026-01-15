@@ -3,8 +3,8 @@ import ProjectCard from "./cards/ProjectCard";
 
 const Projects = () => {
   return (
-    <div className="w-full flex flex-col gap-10">
-      <h2 className="font-semibold text-2xl sm:text-xs tracking-wider uppercase">
+    <div className="w-full flex flex-col gap-8 lg:gap-10">
+      <h2 className="font-semibold text-sm tracking-wider uppercase">
         Projects
       </h2>
       <div className="grid grid-cols-1 gap-7">
